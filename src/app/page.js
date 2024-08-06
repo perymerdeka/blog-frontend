@@ -6,14 +6,14 @@ import { FaEdit, FaUserCircle } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="w-full">
       <h1 className="text-4xl">Dashboard</h1>
-      <div className="flex flex-row gap-8 mt-8">
+      <div className="grid grid-rows-2 lg:grid-cols-3 gap-10 mt-4 w-full">
         <StatsCard title="Posts" value={10} icon={<FaEdit />} />
         <StatsCard title="Categories" value={10} icon={<FaEdit />} />
         <StatsCard title="Users" value={10} icon={<FaUserCircle />} />
       </div>
-      <div className="flex flex-row mt-16">
+      <div className="flex flex-row gap-8">
         <VisitorGrowth />
         <LatestPosts />
       </div>
