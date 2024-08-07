@@ -16,13 +16,13 @@ const VisitorGrowth = () => {
       
       <div className="flex items-center mt-4">
         <button
-          className={`px-4 py-2 rounded-l-lg ${activeButton === 'monthly' ? 'bg-orange-linear-300 text-white' : 'bg-gray-100 text-gray-700'}`}
+          className={`px-4 py-2 rounded-l-full rounded-r-full ${activeButton === 'monthly' ? 'bg-orange-linear-300 text-white' : 'bg-gray-100 text-gray-700'}`}
           onClick={() => setActiveButton('monthly')}
         >
           Monthly
         </button>
         <button
-          className={`px-4 py-2 rounded-r-lg ${activeButton === 'yearly' ? 'bg-orange-linear-300 text-white' : 'bg-gray-100 text-gray-700'}`}
+          className={`px-4 py-2 rounded-r-full rounded-l-full ${activeButton === 'yearly' ? 'bg-orange-linear-300 text-white' : 'bg-gray-100 text-gray-700'}`}
           onClick={() => setActiveButton('yearly')}
         >
           Yearly
