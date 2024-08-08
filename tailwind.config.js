@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       colors: {
         'orange-linear': {  DEFAULT: '#FF6A64',  50: '#FFFFFF',  100: '#FFFFFF',  200: '#FFE0DE',  300: '#FFB8B6',  400: '#FF918D',  500: '#FF6A64',  600: '#FF342C',  700: '#F30900',  800: '#BB0700',  900: '#830500',  950: '#670400'},
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,4 +76,6 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+
+  
 }

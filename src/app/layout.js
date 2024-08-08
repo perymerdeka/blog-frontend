@@ -15,17 +15,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={cn(inter.className, 'bg-white')}>
-        <section>
-          <Header />
-        </section>
-
-        <div className="flex flex-col lg:flex-row">
-          <div className="py-4 px-2 ml-8 mr-16 hidden lg:block">
+        <div className="flex flex-col lg:flex-row min-h-screen">
+          <div className="hidden lg:block lg:w-1/4">
             <Sidebar />
           </div>
-          <main className="px-8 py-8 w-full">
-            {children}
-          </main>
+          <div className="flex flex-col flex-grow lg:w-3/4">
+            <Header />
+            <main className="flex-grow p-8">
+              {children}
+            </main>
+          </div>
         </div>
       </body>
     </html>
