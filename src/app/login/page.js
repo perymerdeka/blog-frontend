@@ -2,12 +2,12 @@
 'use client';
 
 import React, { useEffect } from 'react'
-import { useLogin } from '../../hooks/useLogin';
 import LoginForm from '@/components/LoginForm';
 import { useRouter } from 'next/navigation';
+import { useLogin } from '@/hooks/useLogin';
 
 const LoginPage = () => {
-  const { login, loading, error } = useLogin();
+  const { login, loading, error } = useLogin(); // ambil nilai dari backend
 
   // definisikan router disini untuk handle redirect
   const router = useRouter();

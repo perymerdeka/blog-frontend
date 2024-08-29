@@ -1,0 +1,1 @@
+1. menyambungkan backend login dengan email ke frontend

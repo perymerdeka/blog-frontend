@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const API_URL = process.env.API_URL || 'http://localhost:5000';
+const API_URL = process.env.API_URL || 'http://localhost:8000';
 
 export function useLogin() {
   const [loading, setLoading] = useState(false);
@@ -23,6 +23,7 @@ export function useLogin() {
       });
 
       const data = await response.json();
+      console.log(data)
 
       if (!response.ok) {
         throw new Error(data.error || data.message || 'Something went wrong');
@@ -31,6 +32,10 @@ export function useLogin() {
       // save token to local storage
       localStorage.setItem('accessToken', data.userCredential.user.stsTokenManager.accessToken);
       localStorage.setItem('refreshToken', data.userCredential.user.stsTokenManager.refreshToken);
+
+
+      // redirect ke halaman dashboard
+      window.location.href = '/';
 
     
 

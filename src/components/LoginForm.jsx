@@ -10,7 +10,8 @@ export default function LoginForm({ onSubmit, loading }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ email, password });
+    onSubmit({ email, password }); // call the onSubmit function passed as a prop
+    console.log(email, password)
   };
 
   return (
